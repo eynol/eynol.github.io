@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<div class="posts">
+  {% for post in site.posts %}
+  <div class="mini">
+        <span class="time">{{ post.date | date: "%B %e, %Y" }}</span><br/>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="title">{{ post.title }}</a>
+  </div>
+  {% endfor %}
+</div>
