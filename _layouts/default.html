@@ -17,20 +17,15 @@
 
   <body>
     <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <!-- <p class="site-description">{{ site.description }}</p> -->
-          </div>
+      <header class="masthead clearfix">
+        <!-- <h1 class="site-name"><a class="fixed-nav" href="{{ site.baseurl }}/">Articles</a></h1> -->
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/notes/">Notes</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
+        <nav>
+          <a class="fixed-nav top-left" href="{{ site.baseurl }}/">TK</a>
+          <a class="fixed-nav top-right" href="{{ site.baseurl }}/">HOME</a>
+          <a class="fixed-nav bottom-left" href="{{ site.baseurl }}/about">AboutMe</a>
+        </nav>
+      </header>
     </div>
 
     <div id="main" role="main" class="container">

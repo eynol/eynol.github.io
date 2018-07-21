@@ -19,13 +19,14 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 16px/1.8 $helvetica;
   color: $black;
 }
 
 .container {
   margin: 0 auto;
   max-width: 980px;
+  max-width: 75vw;
   padding: 0 10px;
   width: 100%;
 }
@@ -127,12 +128,12 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $white;
+  background: #a2acf9;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $white;
+  background: #a2acf9;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -163,32 +164,32 @@ img {
 }
 
 .masthead {
-  background-color: $white;
   padding: 20px 0;
-  @include mobile {
-    text-align: center;
-  }
+  // @include mobile {
+  //   text-align: center;
+  // }
 }
 
-
-.site-info {
-  float: left;
-
-  @include mobile {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-}
 
 .site-name {
-  margin: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  
+  margin: 4.5vw;
   color: $darkGray;
   cursor: pointer;
   font-family: $helveticaNeue;
-  font-weight: 900;
-  font-size: 28px;
-  letter-spacing: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0.3;
+
+  &:hover,
+  & a:hover{
+    opacity: 1;
+  }
+  
 }
 
 .site-description {
@@ -216,14 +217,41 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: #000;
+    opacity: 0.3;
     text-align: right;
+    font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: $blue;
+    &:hover{
+      color: currentColor;
+      opacity: 1;
+    }
+    &.top-left{
+      position: fixed;
+     
+      // transform: rotateZ(90deg);
+      transform-origin: left top;
+      left: -0.4em;
+      top: 0;
+      margin: 4.5vw;
+    }
+    &.top-right{
+      position: fixed;
+     
+      transform: rotateZ(90deg);
+      transform-origin: left top;
+      right: -4em;
+      top: 0;
+      margin: 4.5vw;
+    }
+    &.bottom-left{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      transform: rotateZ(-90deg);
+      transform-origin: left top;
+      margin: 4.5vw;
     }
   }
 }
@@ -242,7 +270,7 @@ nav {
   }
 
   .title{
-    font-family: "proxima-nova";
+    text-align: center;
     font-size: 16px;
     line-height: 1.5em;
     text-transform: none;
@@ -272,9 +300,11 @@ nav {
 }
 
 .post {
-  
+  .post-header{
+    text-align: center;
+  }
   p{
-    line-height: 1.5em;
+    line-height: 2em;
     text-align: justify;
   }
 
@@ -305,26 +335,32 @@ nav {
 
 footer {
   padding: 20px 0;
-  text-align: right;
-  
+  text-align: center;
+
  
   & > p {
     float: left;
   }
   a{
     font-size: 14px;
-    color: inherit;
+    color: #000;
+    opacity: 0.3;
+    margin: 0 6px;
     transition: color ease-out .3s;
+    svg{
+      width:24px;
+      height: 24px;
+    }
     &:hover, &:focus{
-      color: $pureblack;
+      opacity: 1;
     }
   }
 }
-.hover-effect{
-  &:hover {
-    color: #bbb;
-  }
-}
+// .hover-effect{
+//   &:hover {
+//     color: #bbb;
+//   }
+// }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

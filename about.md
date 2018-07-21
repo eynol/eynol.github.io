@@ -1,14 +1,25 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-I am a Font-End developer
+Hi~
 
+I am a Font-End developer, working in HangZhou, China at present.
 
-Here is [My own personal site](https://www.heitaov.cn).
+I share my ideas at this website (eynol.github.io). 
 
-### Contact me
+I can speak Mandarin, Sichuan dialect and English. I am planning to learn Janpanese so that I can speak four laungages :) . 
 
-[eynol@qq.com](mailto:eynol@qq.com)
+I am facing my struggle in my life.
+
+I want to write novels or create something.
+
+I love cyberpunk.
+
+My personal homepage is [https://www.heitaov.cn](https://www.heitaov.cn).
+
+### Contact Me
+
+You can email me at [eynol@qq.com](mailto:eynol@qq.com) or [eynol@outlook.com](mailto:eynol@outlook.com). I am looking forward to your email.
