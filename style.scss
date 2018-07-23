@@ -29,6 +29,9 @@ body {
   max-width: 75vw;
   padding: 0 10px;
   width: 100%;
+  @include bigscreen{
+    max-width: 980px;
+  }
 }
 
 .nav-container {
