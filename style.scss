@@ -1,16 +1,29 @@
+--- 
 ---
----
-
-//
 // IMPORTS
 //
-
 @import "reset";
+@keyframes bgtetrad {
+  0% {
+    background-color: #2a2c35;
+  }
+  25% {
+    background-color: #2e2435;
+  }
+  50% {
+    background-color: #35302a;
+  }
+  75% {
+    background-color: #352431;
+  }
+}
+
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
-
 /**************/
+
 /* BASE RULES */
+
 /**************/
 
 html {
@@ -18,36 +31,22 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 16px/1.8 $helvetica;
-  color: $black;
+  color: $black; // animation: bgtetrad 120s infinite;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 980px;
-  max-width: 75vw;
-  padding: 0 10px;
-  width: 100%;
-  @include bigscreen{
-    max-width: 980px;
-  }
-}
-
-.nav-container {
-  margin: 0 auto;
-  padding: 0 5%;
-  width: 100%;
-}
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
   font-weight: bold;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
-
   @include mobile {
     line-height: 1.4;
   }
@@ -69,8 +68,7 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
-  color: $gray;
+  font-size: 18px; // color: $gray;
 }
 
 p {
@@ -78,15 +76,17 @@ p {
 }
 
 a {
-  color: $blue;
   text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
-    color: $gray;
+  cursor: pointer;
+  color:$blue;
+  &:hover,
+  &:active {
+    opacity: 0.7;
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin: 15px 0;
   padding-left: 30px;
 }
@@ -99,19 +99,25 @@ ol {
   list-style-type: decimal;
 }
 
-ol ul, ul ol, ul ul, ol ol {
+ol ul,
+ul ol,
+ul ul,
+ol ol {
   margin: 0;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -132,129 +138,113 @@ img {
 // Specify the color of the selection
 ::-moz-selection {
   color: $white;
-  background: #a2acf9;
+  background: $blue;
 }
+
 ::selection {
   color: $white;
-  background: #a2acf9;
+  background: $blue;
 }
 
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
+
 /* LAYOUT / SECTIONS */
+
 /*********************/
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 20px;
+  display: flex; // justify-content: center;
+  @include bigscreen {
+    max-width: 980px;
+  }
+}
+
+.nav-container {
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 100%;
+}
 
 //
 // .masthead
 //
-
 .wrapper-masthead {
-  margin-bottom: 50px;
-  padding-top: 65px;
-  position: sticky;
-  top: -65px;
+  margin: 0 auto 50px; // margin-bottom: 50px;
+  max-width: 900px;
+  padding: 0 20px;
+  @include bigscreen {
+    max-width: 980px;
+  }
 }
 
 .masthead {
-  padding: 20px 0;
-  // @include mobile {
+  display: flex;
+  align-items: center;
+  padding: 20px 0; // @include mobile {
   //   text-align: center;
   // }
 }
 
-
 .site-name {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  
-  margin: 4.5vw;
-  color: $darkGray;
-  cursor: pointer;
-  font-family: $helveticaNeue;
+  text-align: center;
+  font-family: serif;
   font-weight: 600;
   font-size: 18px;
-  letter-spacing: 2px;
-  opacity: 0.3;
-
-  &:hover,
-  & a:hover{
-    opacity: 1;
+  >span {
+    color: $white;
+    background-color: $blue;
+    padding: 20px 30px;
   }
-  
 }
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $white;
   font-size: 16px;
-
   @include mobile {
     margin: 3px 0;
   }
 }
 
 nav {
-  float: right;
+  text-align: center;
   font-family: $helveticaNeue;
   font-size: 14px;
   text-transform: capitalize;
-
   @include mobile {
-    float: none;
     margin-top: 9px;
     display: block;
     font-size: 16px;
   }
-
   a {
-    margin-left: 20px;
-    color: #000;
-    opacity: 0.3;
+    margin-left: 60px;
+    @include mobile {
+      margin-left: 20px;
+    }
+    color: inherit;
+    opacity: 0.8;
     text-align: right;
     font-size: 1.25rem;
     font-weight: 500;
     letter-spacing: 1px;
-    &:hover{
+    &:hover {
       color: currentColor;
       opacity: 1;
-    }
-    &.top-left{
-      position: fixed;
-     
-      // transform: rotateZ(90deg);
-      transform-origin: left top;
-      left: -0.4em;
-      top: 0;
-      margin: 4.5vw;
-    }
-    &.top-right{
-      position: fixed;
-     
-      transform: rotateZ(90deg);
-      transform-origin: left top;
-      right: -4em;
-      top: 0;
-      margin: 4.5vw;
-    }
-    &.bottom-left{
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      transform: rotateZ(-90deg);
-      transform-origin: left top;
-      margin: 4.5vw;
     }
   }
 }
@@ -262,68 +252,90 @@ nav {
 //
 // .main
 //
-
-.posts > .mini {
-  margin: 25px 0 ;
-  
-  .time {
-    margin: 5px 0;
-    font-size: 14px;
-    font-weight: 400;
+.posts>.mini {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include mobile{
+    align-items: flex-start;
+    flex-direction: column;
   }
-
-  .title{
-    text-align: center;
+  margin: 25px 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  .time {
+    flex-grow: 0;
+    font-style: italic;
+    line-height: 20px;
+    font-weight: 400;
+    vertical-align: middle;
+    margin-right: 24px;
+  }
+  .title {
+    vertical-align: middle;
     font-size: 16px;
-    line-height: 1.5em;
+    line-height: 20px;
     text-transform: none;
     font-weight: 400;
     margin: .5em 0;
     font-style: normal;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 }
 
-.mini a{
-  color: $black;
-  
-  &:hover, &:active {
-    color: $gray;
+.mini a {
+  color: $darkGray;
+  &:hover,
+  &:active {
+    color: $darkerGray;
   }
 }
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+.posts {
+  // flex-shrink: 1;
+  >.post {
+    padding-bottom: 2em;
+    border-bottom: 1px solid $lightGray;
+  }
 }
 
-.posts > .post:last-child {
+.posts>.post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
 
 .post {
-  .post-header{
-    text-align: center;
+  .post-header {
+    // text-align: center;
+    position: relative;
+    margin-bottom: 3em;
+    &:before {
+      position: absolute;
+      bottom: -1em;
+      content: '';
+      display: block;
+      width: 3em;
+      height: 5px;
+      background-color: $blue;
+      border-bottom: 3px solid $blue;
+    }
   }
-  p{
-    line-height: 2em;
+  p {
+    line-height: 1.7;
     text-align: justify;
+    @include mobile{
+      line-height: 1.5;
+    }
   }
-
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
-    color: $gray;
+    color: $white;
     font-size: 22px;
     font-style: italic;
   }
-
   .comments {
     margin-top: 10px;
   }
-
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
@@ -333,38 +345,37 @@ nav {
 .wrapper-footer {
   margin-top: 50px;
   padding-bottom: 65px;
-
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
-
- 
-  & > p {
+  &>p {
     float: left;
   }
-  a{
+  a {
     font-size: 14px;
-    color: #000;
-    opacity: 0.3;
+    
+    opacity: 0.5;
     margin: 0 6px;
     transition: color ease-out .3s;
-    svg{
-      width:24px;
+    svg {
+      fill: $darkGray;
+      width: 24px;
       height: 24px;
     }
-    &:hover, &:focus{
-      opacity: 1;
+    &:hover,
+    &:focus {
+      opacity: 7;
     }
   }
 }
+
 // .hover-effect{
 //   &:hover {
 //     color: #bbb;
 //   }
 // }
-
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
