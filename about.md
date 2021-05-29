@@ -5,13 +5,13 @@ layout: about
 eleventyExcludeFromCollections: true
 ---
 
-Hello~
+Hi there~
 
 I am a web developer, working in Chengdu, China at present.
 
-I share my ideas at this website (eyno<span class="hidden">l.gith</span>ub.io). 
+I share my ideas at this website (eynol.github.io).
 
-I can speak Mandarin, Sichuan dialect and English. I am planning to learn Janpanese so that I can speak four laungages :) . 
+I can speak Mandarin, Sichuan dialect and English. I am planning to learn Japanese so that I can speak four languages :) .
 
 I am facing my struggle in my life.
 
