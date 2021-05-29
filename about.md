@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: About
 permalink: /about/
 layout: about
 eleventyExcludeFromCollections: true
