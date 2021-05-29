@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("lib");
   eleventyConfig.addPassthroughCopy("sw.js");
+  eleventyConfig.addPassthroughCopy(".nojekyll");
 
   eleventyConfig.addWatchTarget("sw.js");
   eleventyConfig.addWatchTarget("./css");
