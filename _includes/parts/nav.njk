@@ -24,8 +24,10 @@
         <ul  class="flex flex-row font-mono space-x-2 justify-start  sm:justify-end md:space-x-6 sm:space-x-2">
 
             {% for item in navdata %}
-                <li >
-                    <a href="{{item.url}}">{{item.name}}</a>
+                <li {% if page.url === item.url %}
+                        class="text-red-500"
+                    {% endif %} >
+                    <a href="{{item.url}}" >{{item.name}}</a>
                 </li>
             {% endfor %}
 

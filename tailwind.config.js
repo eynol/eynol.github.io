@@ -1,6 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: [
+
     '_includes/**/*.njk',
     'index.njk',
     'contact.njk',

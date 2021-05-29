@@ -2,20 +2,39 @@
 
 @tailwind components;
 
-.post h1{
-  font-size: 1.5rem !important;
-  @apply pb-3 pt-5;
-}
-.post p {
-  margin-top: 1rem/* 16px */ !important;
-  margin-bottom: 1rem/* 16px */ !important;;
-}
+
 @layer utilities {
   @variants dark {
-    .bg-113{
+    .bg-113 {
       background-color: #000113
     }
   }
 }
 
 @tailwind utilities;
+
+
+.post h1 {
+  font-size: 1.5rem !important;
+  @apply pb-3 pt-5;
+}
+
+.post h2 {
+  font-size: 1.2rem !important;
+  @apply pb-2 pt-3;
+}
+
+.post a {
+  @apply underline !important;
+}
+
+.post a:hover {
+
+ @apply text-red-500 !important;
+}
+
+.post p {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+
+}
