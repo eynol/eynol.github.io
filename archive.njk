@@ -1,0 +1,15 @@
+---
+eleventyExcludeFromCollections: true
+title: Archive
+layout: html.njk
+---
+<div class="container   max-w-md px-4 mx-auto">
+    <ul>
+        {%- for post in collections.all | reverse -%}
+            <li>
+                <span class="font-mono font-thin">{{post.data.date | timeFormat('ddd YYYY/MM/DD')}}</span>
+                <a href="{{post.url}}">{{ post.data.title  }}</a>
+            </li>
+        {%- endfor -%}
+    </ul>
+</div>

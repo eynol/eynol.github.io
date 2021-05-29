@@ -1,0 +1,35 @@
+{
+  "name": "eynol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:css": "postcss --config postcss.config.js -w css/*.css  --dir _site/css/",
+    "dev:eleventy": "eleventy --serve",
+    "build": "npm-run-all build:*",
+    "build:css": "postcss --env production  --config postcss.config.js css/*.css  --dir _site/css/",
+    "build:eleventy": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eynol/eynol.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eynol/eynol.github.io/issues"
+  },
+  "homepage": "https://github.com/eynol/eynol.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.2.6",
+    "dayjs": "^1.10.5",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.2"
+  }
+}

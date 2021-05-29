@@ -1,0 +1,21 @@
+@tailwind base;
+
+@tailwind components;
+
+.post h1{
+  font-size: 1.5rem !important;
+  @apply pb-3 pt-5;
+}
+.post p {
+  margin-top: 1rem/* 16px */ !important;
+  margin-bottom: 1rem/* 16px */ !important;;
+}
+@layer utilities {
+  @variants dark {
+    .bg-113{
+      background-color: #000113
+    }
+  }
+}
+
+@tailwind utilities;

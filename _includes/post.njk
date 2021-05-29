@@ -1,0 +1,23 @@
+---
+layout: html.njk
+---
+<div class="container max-w-md px-4 sm:mx-auto">
+    <div class="font-bold font-serif text-5xl">
+        <span>{{title}}</span>
+    </div>
+
+    <div class="font-thin font-sans text-sm my-5">
+        {% for tag in tags %}
+            <span>{{tag}} |</span>
+        {% endfor %}
+        <span>Posted on {{ date | timeFormat('ddd YYYY-MM-DD hh:mm')}}</span>
+
+        {% if data.date %}, and last modified on 
+        <span>{{  data.date | timeFormat('ddd YYYY-MM-DD hh:mm')}}</span>
+        {% endif %}
+    </div>
+    <div class="font-thin font-sans text-sm my-5"></div>
+    <div class="post">
+        {{content|safe}}
+    </div>
+</div>
