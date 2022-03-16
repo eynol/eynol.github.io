@@ -1,6 +1,6 @@
 ---
 title: 使用 traefik 去路由你的容器服务
-date: 2022-03-16 20:36:08
+date: 2022-03-16T20:36:08+08:00
 layout: post
 tags:
 - Traefik
@@ -220,7 +220,12 @@ labels:
   - traefik.http.routers.blog.tls.domains[0].sans=*.homelab.example.org
 ```
 
-我们可以给自己的域名弄一个 homelab.example.org 的，然后在家庭内网里面使用二级泛域名去访问内网的服务。例如：`nextcloud.homelab.example.org` `pi-hole.homelab.example.org` 等等。有了这些域名，但是如果这些域名没有指向内网的服务器怎么办？可以通过在内部自建 DNS 服务解决，将自己设备的 DNS 解析改为自建的即可。这里可以使用软路由来做这件事情，这样的话不用修改自己手持设备上的 DNS 服务器。另一个推荐的是使用简单的 pi-hole 软件来作为dns 服务。
+我们可以给自己的域名弄一个 homelab.example.org 的，然后在家庭内网里面使用二级泛域名去访问内网的服务。例如：
+
+- nextcloud.homelab.example.org
+- pi-hole.homelab.example.org
+
+有了这些域名，但是如果这些域名没有指向内网的服务器怎么办？可以通过在内部自建 DNS 服务解决，将自己设备的 DNS 解析改为自建的即可。这里可以使用软路由来做这件事情，这样的话不用修改自己手持设备上的 DNS 服务器。另一个推荐的是使用简单的 pi-hole 软件来作为dns 服务。
 
 
 ## 如何让 docker 容器内的 traefik 访问宿主机上的端口和服务呢？

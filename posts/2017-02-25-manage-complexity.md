@@ -1,6 +1,6 @@
 ---
 title: 管理复杂
-date: 2017-02-25 12:34:48
+date: 2017-02-25T12:34:48+08:00
 layout: post
 tags:
 - Notes

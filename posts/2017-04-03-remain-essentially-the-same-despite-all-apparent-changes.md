@@ -1,6 +1,6 @@
 ---
 title: 万变不离其宗
-date: 2017-04-03 17:08:28
+date: 2017-04-03T17:08:28+08:00
 layout: post
 tags:
 - Thought

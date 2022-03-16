@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'media',
   content: [
     '_includes/**/*.njk',
     'index.njk',
@@ -16,5 +17,7 @@ module.exports = {
     // ...
     boxDecorationBreak: false,
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

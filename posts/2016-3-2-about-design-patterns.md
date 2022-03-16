@@ -2,7 +2,7 @@
 title: 设计模式的理解
 title2: About Design Patterns
 layout: post
-date: 2016-03-02 17:08:41
+date: 2016-03-02T17:08:41+08:00
 tags:
 - code
 ---

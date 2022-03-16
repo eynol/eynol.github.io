@@ -1,33 +1,31 @@
 @tailwind base;
 
 @tailwind components;
-
+@tailwind utilities;
+@tailwind variants;
 
 @layer utilities {
-  @layer dark {
-    .bg-113 {
-      background-color: #000113
-    }
+
+  .bg-113 {
+    background-color: #000113
   }
+
 }
 
-@tailwind utilities;
 
-
-.post h1 {
-  font-size: 1.5rem !important;
-  @apply pb-3 pt-5;
+.post p {
+  text-align: justify;
 }
-
+/* 
 .post h2 {
   font-size: 1.2rem !important;
   @apply pb-2 pt-3;
-}
+} */
 
-.post h3 {
+/* .post h3 {
   font-size: 1.1rem !important;
   @apply pb-2 pt-3;
-}
+} */
 
 .post a {
   @apply underline !important;
@@ -38,45 +36,11 @@
   @apply text-red-500 !important;
 }
 
-.post p {
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
-  text-indent: 2em;
-  line-height: 1.8em;
-}
 
-h1::before,
+/* h1::before,
 h2::before,
 h3::before,
 h4::before,
 h5::before {
   content: '# ';
-}
-
-
-pre,
-code {
-  background: #303030;
-  color: white;
-  border-radius: 6px;
-  padding: 2px 6px;
-}
-pre {
-  /* border: 3px dashed yellow; */
-  padding: 1rem;
-  overflow: auto;
-  /* box-shadow: 3px 3px 0 0 rgb(248, 244, 3),5px 3px 0 0 rgb(3, 248, 166); */
-}
-pre > code{
-  padding: 0;
-  border: none;
-  background: none;
-}
-
-
-.post ul {
-  padding-left: 3em;
-
-  list-style-type: circle;
-  list-style-position: outside;
-}
+} */

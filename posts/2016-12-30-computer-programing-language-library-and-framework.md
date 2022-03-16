@@ -2,7 +2,7 @@
 title: 编程语言，库文件和框架
 title2: Computer Programing Language, Library and Framework
 layout: post
-date: 2016-12-30 17:08:28
+date: 2016-12-30T17:08:28+08:00
 tags:
 - Thought
 ---

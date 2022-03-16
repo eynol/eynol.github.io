@@ -1,7 +1,7 @@
 ---
 title: 个人软件开发流程
 title-en: Personal Coding Flow
-date: 2017-02-25 12:33:48
+date: 2017-02-25T12:33:48+08:00
 layout: post
 tags:
 - Notes
