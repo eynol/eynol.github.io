@@ -10,10 +10,10 @@ layout: html.njk
         {% for tag in tags %}
             <span>{{tag}} |</span>
         {% endfor %}
-        <span>Posted on {{ date | timeFormat('ddd YYYY-MM-DD hh:mm')}}</span>
+        <span>Posted on {{ date | timeFormat('ddd YYYY-MM-DD')}}</span>
 
         {% if data.date %}, and last modified on 
-        <span>{{  data.date | timeFormat('ddd YYYY-MM-DD hh:mm')}}</span>
+        <span>{{  data.date | timeFormat('ddd YYYY-MM-DD')}}</span>
         {% endif %}
     </div>
     <div class="font-thin font-sans text-sm my-5"></div>
