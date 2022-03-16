@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:alpine
+    labels:
+      - "traefik.http.routers.nginx.entrypoints=diy-name" # 注意这里使用的和静态配置里面相同的名称
+      - "traefik.http.routers.nginx.rule=Host(`localhost`) && PathPrefix(`/nginx`)"
+      - "traefik.http.routers.nginx.middlewares=remove-nginx"
+      - "traefik.http.middlewares.remove-nginx.stripprefix.prefixes=/nginx,/fiibar" 
+
+  whoami:
+    image: traefik/whoami
+    labels:
+      - "traefik.http.routers.whoami.entrypoints=diy-name" # 注意这里使用的和静态配置里面相同的名称
+      - "traefik.http.routers.whoami.rule=Host(`localhost`) && PathPrefix(`/whoami`)"
+
+  traefik:
+    image: traefik:latest
+    ports:
+      - 80:80  # 前面的80是本机的，后面的80是容器里面的80
+      - 443:443
+      - 8080:8080
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik.yml:/etc/traefik/traefik.yml

@@ -1,7 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: [
-
+  content: [
     '_includes/**/*.njk',
     'index.njk',
     'contact.njk',
@@ -10,13 +8,10 @@ module.exports = {
     'offline.njk',
     '**/*.md',
   ],
-  darkMode: "media", // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
+  // theme: {
+  //   extend: {},
+  // },
+
   corePlugins: {
     // ...
     boxDecorationBreak: false,

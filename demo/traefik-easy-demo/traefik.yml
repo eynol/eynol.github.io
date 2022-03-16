@@ -1,0 +1,9 @@
+
+entryPoints:
+  diy-name:
+    # diy-name 可以自己指定，只要保证在 docker 文件中使用对应的这个名称
+    address: ":80"
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"

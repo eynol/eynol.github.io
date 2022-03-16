@@ -4,7 +4,7 @@
 
 
 @layer utilities {
-  @variants dark {
+  @layer dark {
     .bg-113 {
       background-color: #000113
     }
@@ -24,17 +24,59 @@
   @apply pb-2 pt-3;
 }
 
+.post h3 {
+  font-size: 1.1rem !important;
+  @apply pb-2 pt-3;
+}
+
 .post a {
   @apply underline !important;
 }
 
 .post a:hover {
 
- @apply text-red-500 !important;
+  @apply text-red-500 !important;
 }
 
 .post p {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
+  text-indent: 2em;
+  line-height: 1.8em;
+}
 
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before {
+  content: '# ';
+}
+
+
+pre,
+code {
+  background: #303030;
+  color: white;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+pre {
+  /* border: 3px dashed yellow; */
+  padding: 1rem;
+  overflow: auto;
+  /* box-shadow: 3px 3px 0 0 rgb(248, 244, 3),5px 3px 0 0 rgb(3, 248, 166); */
+}
+pre > code{
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+
+.post ul {
+  padding-left: 3em;
+
+  list-style-type: circle;
+  list-style-position: outside;
 }
