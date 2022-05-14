@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="description" content="Ideas worth sharing">
+        <meta property="og:description" content="Ideas worth sharing"/>
+
+        <meta name="author" content="Eynol"/>
+
+        <title>个人软件开发流程</title>
+        <link rel="icon" type="image/svg"  href="/img/logo.svg"/>
+        <link rel="stylesheet" href="/css/tailwind.css" >
+    </head>
+    <body class="bg-white object-cover dark:bg-113 min-h-screen  flex flex-col justify-between text-black dark:text-white">
+        
+<div class="container mx-auto px-4 py-10 " >
+
+    <nav>
+        <div class="sm:float-left  mb-6 sm:mb-0">
+            <a class="block w-20 object-contain" href="/">
+                <img  src="/img/logo.svg" alt="LOGO"/>
+            </a>
+        </div>
+        <ul  class="flex flex-row font-mono space-x-2 justify-start  sm:justify-end md:space-x-6 sm:space-x-2">
+
+            
+                <li  >
+                    <a href="/" >Index</a>
+                </li>
+            
+                <li  >
+                    <a href="/archive/" >Archive</a>
+                </li>
+            
+                <li  >
+                    <a href="/work/" >Works</a>
+                </li>
+            
+                <li  >
+                    <a href="/contact/" >Contact</a>
+                </li>
+            
+                <li  >
+                    <a href="/about/" >About</a>
+                </li>
+            
+
+        </ul>
+    </nav>
+</div>
+        <div class="container max-w-screen-md mx-auto px-4 ">
+    <div class="font-bold font-serif text-5xl">
+        <span>个人软件开发流程</span>
+    </div>
+
+    <div class="font-thin font-sans text-sm my-5">
+        
+            <span>Notes |</span>
+        
+        <span>Posted on Sat 2017-02-25</span>
+
+        
+    </div>
+    <div class="font-thin font-sans text-sm my-5"></div>
+    <div class="post prose  dark:prose-invert">
+        <p>根据软件的大小不同，软件开发的流程也不同。从最初学习编程到现在，软件开发的这个流程也越来复杂，对应的软件规模也越来越大。在此，总结一下2016年及以前软件开发的流程。因为软件开发的课程还在学习中，所以只能浅谈面向对象的方法。</p>
+<h1>面向过程</h1>
+<p>一开始学习编程的过程中，就是面向过程编程的，随性，没有文档。后来有了各种流程图，帮助我们理清思路，并且还有文档。</p>
+<p>所以一开始是有什么需求，根据需求画出流程图(事件流，数据流)，然后再编程。</p>
+<h1>面向对象</h1>
+<p>这个是需要我们从不同抽象层次来思考，适合大型应用和战略性的应用。</p>
+<p><strong>以上两种方式各选一个来开发软件，便不会造成混乱的局面，全在控制中。</strong></p>
+
+    </div>
+</div>
+        <div class="mt-10 px-4 sm:px-20 py-10 ">
+    <div class="container mx-auto">
+        <div class="text-xs font-mono" >
+            <p>&copy;2022
+                KAI TAO
+                
+               |
+               <a href="https://github.com/eynol" 
+                   target="_blank"
+               />Github</a>
+            
+               |
+               <a href="https://www.heitaov.cn" 
+                   target="_blank"
+               />Home</a>
+            
+               |
+               <a href="/contact/" />Contact</a>
+            
+        </p>
+        <p>Powered by <a href="https://www.11ty.dev/" target="_blank">eleventy</a>
+        </p>
+    </div>
+</div>
+</div>
+        <script >
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator
+                        .serviceWorker
+                        .register('/sw.js');
+                });
+            }
+        </script>
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89535578-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', "UA-89535578-1");
+</script>
+
+        
+    </body>
+</html>

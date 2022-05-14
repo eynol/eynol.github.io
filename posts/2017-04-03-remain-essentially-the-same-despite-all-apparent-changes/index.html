@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="description" content="Ideas worth sharing">
+        <meta property="og:description" content="Ideas worth sharing"/>
+
+        <meta name="author" content="Eynol"/>
+
+        <title>万变不离其宗</title>
+        <link rel="icon" type="image/svg"  href="/img/logo.svg"/>
+        <link rel="stylesheet" href="/css/tailwind.css" >
+    </head>
+    <body class="bg-white object-cover dark:bg-113 min-h-screen  flex flex-col justify-between text-black dark:text-white">
+        
+<div class="container mx-auto px-4 py-10 " >
+
+    <nav>
+        <div class="sm:float-left  mb-6 sm:mb-0">
+            <a class="block w-20 object-contain" href="/">
+                <img  src="/img/logo.svg" alt="LOGO"/>
+            </a>
+        </div>
+        <ul  class="flex flex-row font-mono space-x-2 justify-start  sm:justify-end md:space-x-6 sm:space-x-2">
+
+            
+                <li  >
+                    <a href="/" >Index</a>
+                </li>
+            
+                <li  >
+                    <a href="/archive/" >Archive</a>
+                </li>
+            
+                <li  >
+                    <a href="/work/" >Works</a>
+                </li>
+            
+                <li  >
+                    <a href="/contact/" >Contact</a>
+                </li>
+            
+                <li  >
+                    <a href="/about/" >About</a>
+                </li>
+            
+
+        </ul>
+    </nav>
+</div>
+        <div class="container max-w-screen-md mx-auto px-4 ">
+    <div class="font-bold font-serif text-5xl">
+        <span>万变不离其宗</span>
+    </div>
+
+    <div class="font-thin font-sans text-sm my-5">
+        
+            <span>Thought |</span>
+        
+        <span>Posted on Mon 2017-04-03</span>
+
+        
+    </div>
+    <div class="font-thin font-sans text-sm my-5"></div>
+    <div class="post prose  dark:prose-invert">
+        <p>在学习编程的过程中，我发现代码世界里面有很多不变的东西。比如，一个对象的生命周期，总是有创建，配置，使用，销毁这么一个流程。所以，记住很多对象的使用就是记住它的生命周期。万变不离其宗，这种不变的地方有很多。我们先来梳理一下这个“宗”是什么...</p>
+<p>「道」和「术」这两个概念不知道你有没有听说过，对于「术」来说，万变之后，不变的始终是它的「道」。这种哲学问题思考下去是很有意思的，不过这里我们只考虑软件编程中的「道」与「术」。</p>
+<p><strong>要了解软件编程里的道，你就要不断思考背后的本质是什么，或者，它的后面是什么。</strong> 字符串（String）的本质是字符（Char）, 字符的本质就是二进制。以HTTP协议为例，我们服务器传送的图片或者是HTML文件，本质上发送的都是二进制，只是<code>Content-Type</code>的不同导致浏览器的解析也不同。在这里，二进制数据就是「道」，图片、视频等等都是「术」，不变的始终是也二进制数据。HTTP协议的本质也是解析SOCKET携带的消息类型来解析的，SOCKET发送的也是二进制，但是根据HTTP协议，所以才会解析为HTTP请求。SOCKET的本质也是TCP/IP包。要深究下去到最后，就是0和1，这0和1背后的本质就是电路原理和信息论了，我们不深究，到这里，你大概知道软件开发里的一种「道」了。<strong>站在巨人的肩膀上，在基础上发展。</strong></p>
+<h1>生命周期</h1>
+<p>生命周期的道理渗透到了软件开发中的方方面面，以<code>XMLHttpRequst</code>为例，它就是从创建，到配置，然后执行使用，到最后被垃圾回收器收回。以Android的<code>Activity</code>为例，也是从 <code>onCreate</code> 到 <code>onDestroy</code> 。</p>
+<h1>设计模式</h1>
+<p>设计模式也是一种万变不离其宗的，这种管理模式，在不同的编程语言，甚至人类社会都有这种模式。</p>
+<h1>鸭子模型</h1>
+<p>这个很出名的概念也是一个「道」，只要你表现得像一个鸭子我就可以认为你是一个鸭子。我们可以用这个方法来学习新的编程语言或者工具。例如，一开始我不知道这个函数的背后做了什么，但是我知道他能够做什么，我就认为它是一个鸭子。当你要深入学习的时候，就可以拆解这个鸭子。例如NodeJS中的<code>Response对象</code>，和Java中的<code>Response对象</code>，他们都是鸭子，尽管本质上有很大的差别，但是你都可以定义这种<code>Response对象</code>为「将要返回给客户端的结果对象，我要返回的东西要包含在流里面传过去」，用这种方法学习，触类旁通。例如：我前两天看到算法书上讲的二叉树每个节点都有一个计数器用于统计子节点有多少个。我想，前端的VirtualDOM也肯定用了这种东西才能高效计算出不同点，至于怎么计算的截止到目前我还没有时间学。</p>
+<h1>事件驱动模型</h1>
+<p>很多前端的东西都是基于事件驱动的，所以最好画状态流程图来辅助开发软件（如果你使用面向过程的软件开发方法的话）。一般都是某个事件触发后，执行某些操作。而这个事件驱动模型，不就是设计模式里的订阅者模式吗？</p>
+<h1>语法树</h1>
+<p>你学了那么多编程语言，一定有发现其中有很多东西是相通的，假如我们把编程语言当做「术」，其背后可能是一棵语法树，我们是不是可以把这棵语法树再编译成其他编程语言编写的程序呢。你看方言的<code>TypeScript</code>和<code>JavaScript</code>。</p>
+<h1>软件的本质也是解决问题的步骤</h1>
+<p>你要一个信息公布网站，我可以用NodeJS作为后台，可以用Java作为后台，本质上都是为了展示这个网站。所以，编程语言的发展才会向着人类语言的方向发展，到最后一定是几乎人人都能懂一种编程语言去解决某方面的问题。</p>
+<h1>微信订阅号</h1>
+<p>微信订阅号的本质就是一个RSS订阅站点。</p>
+<h1>互联网是一座座孤岛连接成的海洋</h1>
+<p>如果你不知道，那么你就不知道。感觉互联网发展了这么多年，这种孤岛式的模式依然没有变化。而微信或者facebook这种人多的「大陆」，在此之上怎么发展还没有思考过。</p>
+
+    </div>
+</div>
+        <div class="mt-10 px-4 sm:px-20 py-10 ">
+    <div class="container mx-auto">
+        <div class="text-xs font-mono" >
+            <p>&copy;2022
+                KAI TAO
+                
+               |
+               <a href="https://github.com/eynol" 
+                   target="_blank"
+               />Github</a>
+            
+               |
+               <a href="https://www.heitaov.cn" 
+                   target="_blank"
+               />Home</a>
+            
+               |
+               <a href="/contact/" />Contact</a>
+            
+        </p>
+        <p>Powered by <a href="https://www.11ty.dev/" target="_blank">eleventy</a>
+        </p>
+    </div>
+</div>
+</div>
+        <script >
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator
+                        .serviceWorker
+                        .register('/sw.js');
+                });
+            }
+        </script>
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89535578-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', "UA-89535578-1");
+</script>
+
+        
+    </body>
+</html>

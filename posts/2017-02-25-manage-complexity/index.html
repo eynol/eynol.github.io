@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="description" content="Ideas worth sharing">
+        <meta property="og:description" content="Ideas worth sharing"/>
+
+        <meta name="author" content="Eynol"/>
+
+        <title>管理复杂</title>
+        <link rel="icon" type="image/svg"  href="/img/logo.svg"/>
+        <link rel="stylesheet" href="/css/tailwind.css" >
+    </head>
+    <body class="bg-white object-cover dark:bg-113 min-h-screen  flex flex-col justify-between text-black dark:text-white">
+        
+<div class="container mx-auto px-4 py-10 " >
+
+    <nav>
+        <div class="sm:float-left  mb-6 sm:mb-0">
+            <a class="block w-20 object-contain" href="/">
+                <img  src="/img/logo.svg" alt="LOGO"/>
+            </a>
+        </div>
+        <ul  class="flex flex-row font-mono space-x-2 justify-start  sm:justify-end md:space-x-6 sm:space-x-2">
+
+            
+                <li  >
+                    <a href="/" >Index</a>
+                </li>
+            
+                <li  >
+                    <a href="/archive/" >Archive</a>
+                </li>
+            
+                <li  >
+                    <a href="/work/" >Works</a>
+                </li>
+            
+                <li  >
+                    <a href="/contact/" >Contact</a>
+                </li>
+            
+                <li  >
+                    <a href="/about/" >About</a>
+                </li>
+            
+
+        </ul>
+    </nav>
+</div>
+        <div class="container max-w-screen-md mx-auto px-4 ">
+    <div class="font-bold font-serif text-5xl">
+        <span>管理复杂</span>
+    </div>
+
+    <div class="font-thin font-sans text-sm my-5">
+        
+            <span>Notes |</span>
+        
+        <span>Posted on Sat 2017-02-25</span>
+
+        
+    </div>
+    <div class="font-thin font-sans text-sm my-5"></div>
+    <div class="post prose  dark:prose-invert">
+        <p>软件开发中，比较重要的一个思想就是管理复杂度。我们编写函数，就是将这个函数内的所有操作抽象成这个函数来完成。<strong>越大的应用应该越简单。</strong></p>
+<p>有哪些方法来管理复杂度？</p>
+<ul>
+<li>用函数来封装操作的复杂度</li>
+<li>用设计模式来形成一种内部的管理</li>
+<li>用偏函数（或者说柯里化）来隐藏函数参数的复杂度</li>
+<li>高层次与高层次对话，低层次与低层次对话</li>
+</ul>
+
+    </div>
+</div>
+        <div class="mt-10 px-4 sm:px-20 py-10 ">
+    <div class="container mx-auto">
+        <div class="text-xs font-mono" >
+            <p>&copy;2022
+                KAI TAO
+                
+               |
+               <a href="https://github.com/eynol" 
+                   target="_blank"
+               />Github</a>
+            
+               |
+               <a href="https://www.heitaov.cn" 
+                   target="_blank"
+               />Home</a>
+            
+               |
+               <a href="/contact/" />Contact</a>
+            
+        </p>
+        <p>Powered by <a href="https://www.11ty.dev/" target="_blank">eleventy</a>
+        </p>
+    </div>
+</div>
+</div>
+        <script >
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator
+                        .serviceWorker
+                        .register('/sw.js');
+                });
+            }
+        </script>
+        
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-89535578-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', "UA-89535578-1");
+</script>
+
+        
+    </body>
+</html>
